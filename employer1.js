@@ -1,13 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { TextInput, Button } from 'react-native-paper';
 
 const Employer1 = () => {
+  const [company, setCompany] = useState('');
+  const [hours, setHours] = useState('');
+  const [date, setDate] = useState('');
+  const [requirements, setRequirements] = useState('');
+
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Welcome to the employer!</Text>
+      <Text style={styles.text}>Register your company!</Text>
+
+      <TextInput
+        label="Company Name"
+        value={company}
+        onChangeText={setCompany}
+        style={styles.input}
+      />
+
+      <TextInput
+        label="Hours Required"
+        value={hours}
+        onChangeText={setHours}
+        style={styles.input}
+      />
+
+      <TextInput
+        label="Date Required"
+        value={date}
+        onChangeText={setDate}
+        style={styles.input}
+      />
+
+      <TextInput
+        label="Are There Special Requirements"
+        value={requirements}
+        onChangeText={setRequirements}
+        style={styles.input}
+      />
+
+      <Button mode="contained" onPress={() => navigation.navigate('employer2')} style=  {styles.button}>
+        Register
+      </Button>
+
     </View>
+      
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {
