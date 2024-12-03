@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, Alert } from 'react-native';
+import { View, Text, StyleSheet, Alert } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 
 const RegistrationScreen = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleRegister = () => {
-    if (password !== confirmPassword) {
-      Alert.alert('Passwords do not match!');
+    if (!name || !email || !password) {
+      Alert.alert('Please fill in all fields.');
       return;
     }
 
-    // Here you would typically handle the registration logic (e.g., API call)
+    // Registration logic goes here
     Alert.alert('Registration successful!', `Welcome, ${name}`);
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <View style={styles.container}>
       <Text style={styles.header}>Register</Text>
       <TextInput
         label="Full Name"
@@ -27,6 +26,7 @@ const RegistrationScreen = () => {
         onChangeText={setName}
         style={styles.input}
       />
+      
       <TextInput
         label="Email"
         value={email}
@@ -34,6 +34,7 @@ const RegistrationScreen = () => {
         keyboardType="email-address"
         style={styles.input}
       />
+
       <TextInput
         label="Password"
         value={password}
@@ -41,23 +42,17 @@ const RegistrationScreen = () => {
         secureTextEntry
         style={styles.input}
       />
-      <TextInput
-        label="Confirm Password"
-        value={confirmPassword}
-        onChangeText={setConfirmPassword}
-        secureTextEntry
-        style={styles.input}
-      />
+
       <Button mode="contained" onPress={handleRegister} style={styles.button}>
         Register
       </Button>
-    </ScrollView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
+    flex: 1,
     justifyContent: 'center',
     padding: 20,
   },
