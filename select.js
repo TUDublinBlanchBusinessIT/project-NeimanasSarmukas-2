@@ -8,7 +8,12 @@ const Select = () => {  // Ensure the component is properly defined
 
   return (
     <View style={styles.container}>
-    
+    <Image
+      source={{
+        uri: 'https://www.cypruscu.com/images/default-source/about/fast-fundsartboard-1.png?sfvrsn=a49664ae_1',
+      }}
+      style={styles.bannerImage}
+    />
       <Text style={styles.header}>Are You A :</Text>
       <Button
         mode="contained" onPress={() => navigation.navigate('employer1')}
@@ -41,7 +46,12 @@ const styles = StyleSheet.create({
   button: {
     marginTop: 20,
   },
-
+  bannerImage: {
+    width: '100%',
+    height: 120,
+    borderRadius: 10,
+    marginBottom: 10,
+  }
 });
 
 export default Select;
