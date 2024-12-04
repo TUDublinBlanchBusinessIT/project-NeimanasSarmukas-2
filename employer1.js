@@ -3,45 +3,38 @@ import { View, Text, StyleSheet } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 
-const Employer1 = () => {
-  const [company, setCompany] = useState('');
-  const [hours, setHours] = useState('');
-  const [date, setDate] = useState('');
-  const [requirements, setRequirements] = useState('');
+const Employee1 = () => {
+  const [jobPreference, setJobPreference] = useState('');
+  const [phone, setPhone] = useState('');
+  const [qualifications, setQualifications] = useState('');
   const navigation = useNavigation();
 
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Register your company!</Text>
+      <Text style={styles.header}>Register Yourself</Text>
 
       <TextInput
-        label="Company Name"
-        value={company}
-        onChangeText={setCompany}
+        label="Job Preference"
+        value={jobPreference}
+        onChangeText={setJobPreference}
         style={styles.input}
       />
 
       <TextInput
-        label="Hours Required"
-        value={hours}
-        onChangeText={setHours}
+        label="Phone Number"
+        value={phone}
+        onChangeText={setPhone}
         style={styles.input}
       />
 
       <TextInput
-        label="Date Required"
-        value={date}
-        onChangeText={setDate}
+        label="Qualifications"
+        value={qualifications}
+        onChangeText={setQualifications}
         style={styles.input}
       />
 
-      <TextInput
-        label="Are There Special Requirements"
-        value={requirements}
-        onChangeText={setRequirements}
-        style={styles.input}
-      />
 
        <Button
         mode="contained"
@@ -73,4 +66,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Employer1;
+export default Employee1;
