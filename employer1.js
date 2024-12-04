@@ -11,7 +11,6 @@ const Employer1 = () => {
   const [requirements, setRequirements] = useState('');
   const navigation = useNavigation();
 
-
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Register your company!</Text>
@@ -40,17 +39,30 @@ const Employer1 = () => {
         style={styles.input}
       />
 
-      <TextInput
-        label="Are There Special Requirements"
-        value={requirements}
-        onChangeText={setRequirements}
-        style={styles.input}
-      />
+      <Text style={styles.radioLabel}>Are There Special Requirements?</Text>
 
-       <Button
+      <View style={styles.radioButtonContainer}>
+        <Text
+          style={[styles.radioButton, requirements === 'Yes' && styles.selected]}
+          onPress={() => setRequirements('Yes')}
+        >
+          Yes
+        </Text>
+
+        <Text
+          style={[styles.radioButton, requirements === 'No' && styles.selected]}
+          onPress={() => setRequirements('No')}
+        >
+          No
+        </Text>
+        
+      </View>
+
+      <Button
         mode="contained"
         onPress={() => navigation.navigate('employer2')}
-        style={styles.button}>
+        style={styles.button}
+      >
         Register
       </Button>
     </View>
@@ -79,6 +91,20 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 40,
     marginBottom: 20,
+  },
+  radioButtonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginBottom: 20,
+  },
+  radioButton: {
+    fontSize: 16,
+    padding: 10,
+    color: '#333',
+  },
+  selected: {
+    fontWeight: 'bold',
+    color: '#3b82f6',
   },
 });
 
