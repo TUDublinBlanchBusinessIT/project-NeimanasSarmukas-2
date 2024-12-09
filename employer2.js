@@ -4,8 +4,11 @@ import { Button } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 
 const Employer2 = () => {
+  const navigation = useNavigation();
+  
   return (
     <View style={styles.container}>
+     
       <Text style={styles.text}>Welcome to the employee search!</Text>
       
       <View style={styles.flexContainer}>
@@ -56,19 +59,19 @@ const Employer2 = () => {
       <View style={styles.buttonContainer}>
       <Button
         mode="contained"
-        onPress={() => navigation.navigate('employer2.js')}
+        onPress={() => navigation.navigate('employer2')}
         style={styles.button}
       >
         Home
       </Button>
 
-      <Button
-        mode="contained"
-        onPress={() => navigation.navigate('profile.js')}
-        style={styles.button}
-      >
-        Profile
-      </Button>
+       <Button
+          mode="contained"
+          onPress={() => navigation.navigate('profile')} // Navigate to ProfileScreen
+          style={styles.button}
+        >
+          Profile
+        </Button>
       
       </View>
     </View>
