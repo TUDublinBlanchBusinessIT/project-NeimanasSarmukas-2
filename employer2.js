@@ -1,5 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
+import { Button } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
 
 const Employer2 = () => {
   return (
@@ -50,36 +52,23 @@ const Employer2 = () => {
       
       </View>
 
-      <View style={styles.flexContainer}>
-      <Image
-        source={{
-          uri: 'https://img.rasset.ie/0015e662-1200.jpg',
-        }}
-        style={styles.bannerImage}
-      />
-        <Text style={styles.text2}>Warehouse Worker!</Text>
-      
-      </View>
 
-      <View style={styles.flexContainer}>
-      <Image
-        source={{
-          uri: 'https://img.rasset.ie/0015e662-1200.jpg',
-        }}
-        style={styles.bannerImage}
-      />
-        <Text style={styles.text2}>Warehouse Worker!</Text>
-      
-      </View>
+      <View style={styles.buttonContainer}>
+      <Button
+        mode="contained"
+        onPress={() => navigation.navigate('employer2.js')}
+        style={styles.button}
+      >
+        Home
+      </Button>
 
-      <View style={styles.flexContainer}>
-      <Image
-        source={{
-          uri: 'https://img.rasset.ie/0015e662-1200.jpg',
-        }}
-        style={styles.bannerImage}
-      />
-        <Text style={styles.text2}>Warehouse Worker!</Text>
+      <Button
+        mode="contained"
+        onPress={() => navigation.navigate('profile.js')}
+        style={styles.button}
+      >
+        Profile
+      </Button>
       
       </View>
     </View>
@@ -120,6 +109,20 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginLeft: 15,
   },
+  buttonContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    padding: 5,
+    width: '100%',
+    marginBottom: 10,
+    borderRadius: 5,
+  },
+  button: {
+    marginLeft: 5,
+    marginRight: 5,
+  }
 });
 
 export default Employer2;
