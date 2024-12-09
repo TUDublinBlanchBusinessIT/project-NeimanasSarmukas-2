@@ -4,9 +4,12 @@ import { Button } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 
 const Employee2 = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Welcome to the employee search!</Text>
+ 
+      <Text style={styles.text}>Job Search!</Text>
       
       <View style={styles.flexContainer}>
       <Image
@@ -33,22 +36,22 @@ const Employee2 = () => {
       <View style={styles.flexContainer}>
       <Image
         source={{
-          uri: 'https://img.rasset.ie/0015e662-1200.jpg',
+          uri: 'https://media.sciencephoto.com/image/f0206410/800wm',
         }}
         style={styles.bannerImage}
       />
-        <Text style={styles.text2}>Warehouse Worker!</Text>
+        <Text style={styles.text2}>Cashier!</Text>
       
       </View>
 
       <View style={styles.flexContainer}>
       <Image
         source={{
-          uri: 'https://img.rasset.ie/0015e662-1200.jpg',
+          uri: 'https://dhl-freight-connections.com/wp-content/uploads/2024/04/forklift-1.png',
         }}
         style={styles.bannerImage}
       />
-        <Text style={styles.text2}>Warehouse Worker!</Text>
+        <Text style={styles.text2}>Forklift Driver!</Text>
       
       </View>
 
@@ -56,7 +59,7 @@ const Employee2 = () => {
       <View style={styles.buttonContainer}>
       <Button
         mode="contained"
-        onPress={() => navigation.navigate('employee2.js')}
+        onPress={() => navigation.navigate('employee2')}
         style={styles.button}
       >
         Home
@@ -64,7 +67,7 @@ const Employee2 = () => {
 
       <Button
         mode="contained"
-        onPress={() => navigation.navigate('profile.js')}
+        onPress={() => navigation.navigate('profile')}
         style={styles.button}
       >
         Profile
