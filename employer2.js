@@ -9,12 +9,12 @@ const Employer2 = () => {
   return (
     <View style={styles.container}>
      
-      <Text style={styles.text}>Welcome to the employee search!</Text>
+      <Text style={styles.text}>Employee search!</Text>
       
       <View style={styles.flexContainer}>
       <Image
         source={{
-          uri: 'https://img.rasset.ie/0015e662-1200.jpg',
+          uri: 'https://cdn-blog.novoresume.com/articles/cv-examples/Web-Developer-CV-Example.png',
         }}
         style={styles.bannerImage}
       />
@@ -25,7 +25,7 @@ const Employer2 = () => {
       <View style={styles.flexContainer}>
       <Image
         source={{
-          uri: 'https://c8.alamy.com/comp/FWC50N/toan-thang-chinese-takeaway-with-delivery-service-bundoran-ireland-FWC50N.jpg',
+          uri: 'https://www.resume-now.com/sapp/uploads/2024/03/b7826cf5-dcab-4ac8-a636-01b6661ed850_ea5c9fb4-9e7b-4aa3-9e04-a1640ee30d2a_CV-example-video-producer.svg',
         }}
         style={styles.bannerImage}
       />
@@ -36,22 +36,22 @@ const Employer2 = () => {
       <View style={styles.flexContainer}>
       <Image
         source={{
-          uri: 'https://img.rasset.ie/0015e662-1200.jpg',
+          uri: 'https://s3.resume.io/cdn-cgi/image/width=544,format=auto/uploads/examples/resume/resume_pages/35976/persistent-resource/teen-cv-examples.jpg',
         }}
         style={styles.bannerImage}
       />
-        <Text style={styles.text2}>Warehouse Worker!</Text>
+        <Text style={styles.text2}>ANY!</Text>
       
       </View>
 
       <View style={styles.flexContainer}>
       <Image
         source={{
-          uri: 'https://img.rasset.ie/0015e662-1200.jpg',
+          uri: 'https://www.my-resume-templates.com/wp-content/uploads/2023/05/good-resume-example.jpg',
         }}
         style={styles.bannerImage}
       />
-        <Text style={styles.text2}>Warehouse Worker!</Text>
+        <Text style={styles.text2}>Van Driver!</Text>
       
       </View>
 
